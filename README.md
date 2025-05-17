@@ -24,7 +24,7 @@ Este proyecto es una aplicación web interactiva desarrollada con HTML, CSS y Ja
 
 ## 🚀 Ver demo en vivo
 
-👉 [Haz clic aquí para ver la app online]([https://TU_USUARIO.github.io/quiz-matematicas-columnas/](https://9hrld3.github.io/mate_estructural/))
+👉 [Haz clic aquí para ver la app online]([https://9hrld3.github.io/mate_estructural/])
 
 ---
 
