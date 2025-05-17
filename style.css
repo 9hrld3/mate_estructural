@@ -1,0 +1,159 @@
+:root {
+    --primary: #1c1f24;
+    --accent: #00bfff;
+    --correct-bg: #006644;
+    --incorrect-bg: #8b0000;
+    --text-color: #e0e0e0;
+    --warning: #f8d100;
+    --glow-yellow: 0 0 12px 4px #f8d100;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0f12;
+    color: var(--text-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    color: var(--accent);
+    text-shadow: 0 0 12px var(--accent);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  #quiz-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1300px;
+  }
+  
+  .card {
+    background: var(--primary);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.2);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    min-height: 200px;
+  }
+  
+  .card.locked {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  
+  .card.correct {
+    background-color: var(--correct-bg);
+    box-shadow: var(--glow-yellow);
+  }
+  
+  .card.incorrect {
+    background-color: var(--incorrect-bg);
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .card i {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .card button {
+    background-color: #0f1b22;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.4rem;
+    margin: 0.3rem 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .card button:hover {
+    background-color: var(--accent);
+    color: #0a0f12;
+  }
+  
+  #results {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #1c1f24;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.2);
+    max-width: 500px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card.correct .card-content,
+  .card.incorrect .card-content {
+    display: none;
+  }
+
+  .card-feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .card-feedback.correct {
+    background-color: var(--correct-bg);
+    color: white;
+    border-radius: 10px;
+    box-shadow: var(--glow-yellow);
+  }
+  
+  .card-feedback.incorrect {
+    background-color: var(--incorrect-bg);
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .card-feedback i {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+    color: white;
+  }
+  
+  .card-feedback p {
+    margin: 0 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  
